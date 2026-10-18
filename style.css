@@ -1,141 +1,57 @@
-/* style.css — свои стили поверх Bootstrap */
-
 * { box-sizing: border-box; }
-
-:root {
-  --accent: #4f46e5;
-  --accent-dark: #3730a3;
-  --text: #0f172a;
-  --bg: #f8fafc;
-}
 
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: var(--text);
-  background: var(--bg);
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  background: #f8fafc;
+  color: #0f172a;
 }
 
-main { flex: 1; }
-
-/* Меню */
-.main-nav {
-  background: var(--text);
-}
-
-.main-nav .nav-link:hover,
-.main-nav .nav-link:focus {
-  color: #a5b4fc;
-}
-
-/* Главный блок */
-.hero {
-  background: linear-gradient(135deg, var(--accent), #0ea5e9);
+header {
+  background: #1e3a8a;
   color: white;
-}
-
-.hero-label {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 14px;
-  opacity: 0.85;
-}
-
-.hero-photo {
-  width: 100%;
-  max-width: 280px;
-  border-radius: 50%;
-  background: white;
   padding: 16px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
-/* Шапка внутренних страниц */
-.page-head {
-  background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+header h1 {
+  margin: 0 0 10px;
+}
+
+nav a {
   color: white;
+  margin-right: 15px;
 }
 
-/* Заголовки секций */
-.section-title {
-  font-weight: 700;
-  position: relative;
-  padding-bottom: 8px;
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.section-title::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 48px;
-  height: 4px;
-  border-radius: 2px;
-  background: var(--accent);
+section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
 }
 
-/* Карточки */
-.card {
-  border: 1px solid #e2e8f0;
-  border-radius: 16px;
+img {
+  width: 200px;
 }
 
-.project-card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+footer {
+  text-align: center;
+  color: #64748b;
+  padding: 10px;
 }
 
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12) !important;
-}
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin-bottom: 5px;
+  }
 
-.card-icon {
-  font-size: 32px;
-  margin-bottom: 8px;
-}
-
-/* Этапы работы */
-.steps li {
-  margin-bottom: 8px;
-}
-
-/* Контакты */
-.contact-list li {
-  padding: 10px 0;
-  border-bottom: 1px solid #e2e8f0;
-}
-
-.contact-list li:last-child { border-bottom: none; }
-
-.contact-list span {
-  display: inline-block;
-  width: 28px;
-}
-
-/* Кнопка */
-.btn-primary {
-  background: var(--accent);
-  border-color: var(--accent);
-}
-
-.btn-primary:hover {
-  background: var(--accent-dark);
-  border-color: var(--accent-dark);
-}
-
-/* Подвал */
-.site-footer {
-  background: var(--text);
-  color: #cbd5e1;
-  font-size: 14px;
-}
-
-/* Адаптив: на телефоне уменьшаем картинку и заголовки */
-@media (max-width: 767px) {
-  .hero-photo { max-width: 180px; }
-  .hero h1 { font-size: 32px; }
+  img {
+    width: 100%;
+  }
 }
